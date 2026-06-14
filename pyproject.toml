@@ -5,8 +5,8 @@ description = "Fast int4 quantized inference for Voxtral-4B-TTS"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "torch>=2.6",
-    "torchaudio",
+    "torch>=2.11",
+    "torchaudio>=2.11",
     "torchao>=0.16",
     "hqq",
     "safetensors",
