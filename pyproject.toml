@@ -1,0 +1,24 @@
+[project]
+name = "voxtral-int4"
+version = "0.1.0"
+description = "Fast int4 quantized inference for Voxtral-4B-TTS"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.6",
+    "torchaudio",
+    "torchao>=0.16",
+    "hqq",
+    "safetensors",
+    "soundfile",
+    "numpy",
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+]
+
+[project.optional-dependencies]
+dev = ["huggingface_hub"]
+
+[tool.uv]
+prerelease = "allow"

@@ -100,14 +100,14 @@ Supports 45 voice names (20 native Voxtral + 25 Orpheus-compatible aliases). Out
 git clone https://github.com/YOUR_USER/voxtral-int4.git
 cd voxtral-int4
 
-# Create venv
-python3 -m venv venv
-source venv/bin/activate
-pip install torch torchao hqq safetensors soundfile numpy
+# Install dependencies (requires uv: https://docs.astral.sh/uv/)
+uv sync
+
+# Or with pip-compatible interface
+uv pip install -r pyproject.toml --extra dev
 
 # Download model (~7.5 GB)
-pip install huggingface_hub
-huggingface-cli download mistralai/Voxtral-4B-TTS-2603 --local-dir models/original
+uv run -- huggingface-cli download mistralai/Voxtral-4B-TTS-2603 --local-dir models/original
 ```
 
 ### Run

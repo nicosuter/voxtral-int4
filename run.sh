@@ -6,7 +6,7 @@
 #   ./run.sh                              # runs benchmark
 
 cd "$(dirname "$0")/src"
-PYTHON="../venv/bin/python3"
+PYTHON="../.venv/bin/python3"
 MODEL_DIR="../models/original"
 
 if [ -z "$1" ]; then
